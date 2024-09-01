@@ -83,13 +83,13 @@ body {
     color: ${(props) => (props.darkMode ? 'drakblue' : 'black')};
 }
 .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
-    color: ${(props) => (props.darkMode ? '#ffffea' : 'black')};
+    color: ${(props) => (props.darkMode ? 'white' : 'black')};
 }
 .fieldError {
     color: ${(props) => (props.darkMode ? 'red' : 'red')};
 }
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-    background-color:${(props) => (props.darkMode ? '#2b2b2b' : 'white')};
+    background-color:${(props) => (props.darkMode ? 'rgb(43 43 43)' : 'white')};
 }
 .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
     color: ${(props) => (props.darkMode ? 'white' : 'black')};
