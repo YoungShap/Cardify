@@ -140,7 +140,7 @@ export default function Signup() {
                 structure.map(item =>
                   <Grid key={item.name} item xs={12} sm={item.block ? 6 : 12}>
                     <TextField
-                     className="myInputs"
+                     style={{color: isDark ? 'white' : 'black'}}
                       onChange={handleInputChange}
                       name={item.name}
                       type={item.type}

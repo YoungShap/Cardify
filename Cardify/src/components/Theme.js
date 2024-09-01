@@ -76,8 +76,8 @@ body {
     cursor:pointer;
     border:none;
 }
-.MuiInputBase-input MuiOutlinedInput-input css-1x5jdmq {
-    color: ${(props) => (props.darkMode ? 'white' : 'black')};
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    color: ${(props) => (props.darkMode ? '#ffffea' : 'black')};
 }
 .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
     color: ${(props) => (props.darkMode ? 'drakblue' : 'black')};
