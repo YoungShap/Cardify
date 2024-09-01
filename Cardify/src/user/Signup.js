@@ -124,7 +124,7 @@ export default function Signup() {
           <Box component="form" noValidate onSubmit={signup} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
-                <TextField
+                <TextField className='firstNameInput'
                   onChange={handleInputChange}
                   autoComplete="given-name"
                   name="firstName"
@@ -140,6 +140,7 @@ export default function Signup() {
                 structure.map(item =>
                   <Grid key={item.name} item xs={12} sm={item.block ? 6 : 12}>
                     <TextField
+                     className="myInputs"
                       onChange={handleInputChange}
                       name={item.name}
                       type={item.type}
