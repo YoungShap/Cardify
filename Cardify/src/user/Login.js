@@ -133,7 +133,7 @@ export default function Login() {
                         Login
                     </Typography>
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, color: isDark ? 'white' : 'black', width:'100%' }}>
-                        <TextField style={{ bgcolor: isDark ? '#2b2b2b' : 'white' }}
+                        <TextField style={{ bgcolor: isDark ? 'rgb(43 43 43)' : 'white' }}
                             onChange={handleInputChange}
                             margin="normal"
                             required
