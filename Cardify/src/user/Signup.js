@@ -13,7 +13,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Container } from '@mui/material';
 import { GeneralContext } from '../App';
 import { useContext, useState } from 'react';
-import { structure, signupSchema} from '../Config';
+import { structure, signupSchema } from '../Config';
 
 const defaultTheme = createTheme();
 export default function Signup() {
@@ -115,13 +115,13 @@ export default function Signup() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor:isDark? 'black' : 'purple'}}>
+          <Avatar sx={{ m: 1, bgcolor: isDark ? 'black' : 'purple' }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5" sx={{ color: isDark ? 'white' : 'black' }}>
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={signup} sx={{ mt: 3, bgcolor: isDark?  'rgb(43 43 43)' : 'white'}}>
+          <Box component="form" noValidate onSubmit={signup} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -140,6 +140,7 @@ export default function Signup() {
                 structure.map(item =>
                   <Grid key={item.name} item xs={12} sm={item.block ? 6 : 12}>
                     <TextField
+                      sx={{ bgcolor: isDark ? 'rgb(43 43 43)' : 'white' }}
                       onChange={handleInputChange}
                       name={item.name}
                       type={item.type}
@@ -152,7 +153,7 @@ export default function Signup() {
                   </Grid>)
               }
               <Grid item xs={12}>
-                <FormControlLabel style={{color: isDark ? 'white' : 'black' }}
+                <FormControlLabel style={{ color: isDark ? 'white' : 'black' }}
                   label="Sign up as Business"
                   control={<Checkbox
                     color="primary"
@@ -164,7 +165,7 @@ export default function Signup() {
                 />
               </Grid>
             </Grid>
-            <Button style={{backgroundColor: isDark ? '#121010' : 'blue' , color:'white'}}  disabled={!isValid}
+            <Button style={{ backgroundColor: isDark ? '#121010' : 'blue', color: 'white' }} disabled={!isValid}
               type="submit"
               fullWidth
               variant="contained"
@@ -174,7 +175,7 @@ export default function Signup() {
             </Button >
             <Grid container justifyContent="center">
               <Grid item>
-                <Link to="/login" style={{color: isDark ? '#ffffea' : 'black' }}>
+                <Link to="/login" style={{ color: isDark ? '#ffffea' : 'black' }}>
                   Already have an account? Login
                 </Link>
               </Grid>
