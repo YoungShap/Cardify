@@ -125,6 +125,7 @@ export default function Signup() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
+                  sx={{ bgcolor: isDark ? 'rgb(43 43 43)' : 'white' }}
                   onChange={handleInputChange}
                   autoComplete="given-name"
                   name="firstName"
