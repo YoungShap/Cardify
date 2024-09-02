@@ -76,7 +76,7 @@ body {
     cursor:pointer;
     border:none;
 }
-.css-178yklu-input {
+.MuiInputBase-input-MuiOutlinedInput-input-css-1x5jdmq {
     color: ${(props) => (props.darkMode ? '#ffffea' : 'black')};
 }
 .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
@@ -88,7 +88,7 @@ body {
 .fieldError {
     color: ${(props) => (props.darkMode ? 'red' : 'red')};
 }
-.css-178yklu-input {
+.MuiInputBase-input-MuiOutlinedInput-input-css-1x5jdmq {
     background-color:${(props) => (props.darkMode ? 'rgb(43 43 43)' : 'white')};
 }
 .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
