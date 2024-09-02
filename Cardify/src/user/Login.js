@@ -28,51 +28,51 @@ export default function Login() {
     const [formData, setFormData] = useState({
         email: '',
         password: '',
-      });
-      
-      const loginSchema = Joi.object({  // this form's specific JOI validation  //
-          email: Joi.string().required().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
-          password: Joi.string().required().regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d{4})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{9,30}$/)
+    });
+
+    const loginSchema = Joi.object({  // this form's specific JOI validation  //
+        email: Joi.string().required().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
+        password: Joi.string().required().regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d{4})(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{9,30}$/)
             .message('user "password" must be at least nine characters long and contain an uppercase letter, a lowercase letter, 4 numbers and one of the following characters !@#$%^&*'),
-          });
-          const handleInputChange = ev => { // a function that handles any input change made by the user and upadates the DOM accordingly  //
-            const { id, value } = ev.target;
-            let obj = {
-              ...formData,
-              [id]: value,
-            };
-        
-            if (id === 'business') {
-              obj = {
+    });
+    const handleInputChange = ev => { // a function that handles any input change made by the user and upadates the DOM accordingly  //
+        const { id, value } = ev.target;
+        let obj = {
+            ...formData,
+            [id]: value,
+        };
+
+        if (id === 'business') {
+            obj = {
                 ...formData,
                 [id]: ev.target.checked
-              }
             }
-        
-            const schema = loginSchema.validate(obj, { abortEarly: false });
-            const err = { ...errors, [id]: undefined };
-        
-            if (schema.error) {
-              const error = schema.error.details.find(e => e.context.key === id);
-        
-              if (error) {
+        }
+
+        const schema = loginSchema.validate(obj, { abortEarly: false });
+        const err = { ...errors, [id]: undefined };
+
+        if (schema.error) {
+            const error = schema.error.details.find(e => e.context.key === id);
+
+            if (error) {
                 err[id] = error.message;
-              }
-              setIsValid(false);
-            } else {
-              setIsValid(true);
             }
-        
-            setFormData(obj);
-            setErrors(err);
-          };
-      
+            setIsValid(false);
+        } else {
+            setIsValid(true);
+        }
+
+        setFormData(obj);
+        setErrors(err);
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         setIsLoading(true);
-        
-        
+
+
 
         fetch(`https://api.shipap.co.il/clients/login?token=1b2789ce-44e7-11ee-ba96-14dda9d4a5f0`, { // a function that handles login requests, checks and applies corrensponding user roleTypes  //
             credentials: 'include',
@@ -132,8 +132,16 @@ export default function Login() {
                     <Typography component="h1" variant="h5" sx={{ color: isDark ? 'white' : 'black' }}>
                         Login
                     </Typography>
-                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, color: isDark ? 'white' : 'black', width:'100%' }}>
-                        <TextField sx={{ bgcolor: isDark ? 'rgb(43 43 43)' : 'white' }}
+                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, color: isDark ? 'white' : 'black', width: '100%' }}>
+                        <TextField sx={{
+                            bgcolor: isDark ? 'rgb(43 43 43)' : 'white',
+                            '& .MuiInputBase-input': {
+                                color: isDark ? 'white' : 'black', // Text color
+                            },
+                            '& .MuiFormLabel-root': {
+                                color: isDark ? 'white' : 'black', // Label color
+                            },
+                        }}
                             onChange={handleInputChange}
                             margin="normal"
                             required
@@ -145,7 +153,15 @@ export default function Login() {
                             autoFocus
                         />
                         {errors.email ? <div className='fieldError'>{errors.email}</div> : ''}
-                        <TextField sx={{ bgcolor: isDark ? 'rgb(43 43 43)' : 'white' }}
+                        <TextField sx={{
+                            bgcolor: isDark ? 'rgb(43 43 43)' : 'white',
+                            '& .MuiInputBase-input': {
+                                color: isDark ? 'white' : 'black', // Text color
+                            },
+                            '& .MuiFormLabel-root': {
+                                color: isDark ? 'white' : 'black', // Label color
+                            },
+                        }}
                             onChange={handleInputChange}
                             margin="normal"
                             required
