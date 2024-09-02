@@ -82,7 +82,7 @@ body {
 .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
     color: ${(props) => (props.darkMode ? 'drakblue' : 'black')};
 }
-.css-p0rm37-MuiFormLabel-root-MuiInputLabel-root {
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
     color: ${(props) => (props.darkMode ? 'white' : 'black')};
 }
 .fieldError {
@@ -94,7 +94,7 @@ body {
 .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
     color: ${(props) => (props.darkMode ? 'white' : 'black')};
 }
-.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
+.css-p0rm37-MuiFormLabel-root-MuiInputLabel-root {
     color: ${(props) => (props.darkMode ? 'white' : 'black')};
 }
 .big-container {
