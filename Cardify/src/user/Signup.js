@@ -121,7 +121,7 @@ export default function Signup() {
           <Typography component="h1" variant="h5" sx={{ color: isDark ? 'white' : 'black' }}>
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={signup} sx={{ mt: 3 }}>
+          <Box component="form" noValidate onSubmit={signup} sx={{ mt: 3, bgcolor: isDark?  'rgb(43 43 43)' : 'white'}}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
