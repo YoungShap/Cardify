@@ -125,7 +125,15 @@ export default function Signup() {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  sx={{ bgcolor: isDark ? 'rgb(43 43 43)' : 'white' }}
+                  sx={{
+                    bgcolor: isDark ? 'rgb(43 43 43)' : 'white',
+                    '& .MuiInputBase-input': {
+                      color: isDark ? 'white' : 'black', // Text color
+                    },
+                    '& .MuiFormLabel-root': {
+                      color: isDark ? 'white' : 'black', // Label color
+                    },
+                  }}
                   onChange={handleInputChange}
                   autoComplete="given-name"
                   name="firstName"
@@ -141,7 +149,15 @@ export default function Signup() {
                 structure.map(item =>
                   <Grid key={item.name} item xs={12} sm={item.block ? 6 : 12}>
                     <TextField
-                      sx={{ bgcolor: isDark ? 'rgb(43 43 43)' : 'white' }}
+                       sx={{
+                        bgcolor: isDark ? 'rgb(43 43 43)' : 'white',
+                        '& .MuiInputBase-input': {
+                          color: isDark ? 'white' : 'black', // Text color
+                        },
+                        '& .MuiFormLabel-root': {
+                          color: isDark ? 'white' : 'black', // Label color
+                        },
+                      }}
                       onChange={handleInputChange}
                       name={item.name}
                       type={item.type}

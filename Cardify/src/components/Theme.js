@@ -76,9 +76,9 @@ body {
     cursor:pointer;
     border:none;
 }
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-    color: ${(props) => (props.darkMode ? '#ffffea' : 'black')};
-}
+// .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+//     color: ${(props) => (props.darkMode ? '#ffffea' : 'black')};
+// }
 .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
     color: ${(props) => (props.darkMode ? 'drakblue' : 'black')};
 }
@@ -88,15 +88,15 @@ body {
 .fieldError {
     color: ${(props) => (props.darkMode ? 'red' : 'red')};
 }
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-    background-color:${(props) => (props.darkMode ? 'rgb(43 43 43)' : 'white')};
-}
+// .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+//     background-color:${(props) => (props.darkMode ? 'rgb(43 43 43)' : 'white')};
+// }
 .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
     color: ${(props) => (props.darkMode ? 'white' : 'black')};
 }
-.css-p0rm37-MuiFormLabel-root-MuiInputLabel-root {
-    color: ${(props) => (props.darkMode ? 'white' : 'black')};
-}
+// .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
+//     color: ${(props) => (props.darkMode ? 'white' : 'black')};
+// }
 .big-container {
     tr {
         background-color:${(props) => (props.darkMode ? '#1e1e1e' : 'rgb(223, 223, 223)')};
